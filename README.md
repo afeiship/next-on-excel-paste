@@ -12,6 +12,7 @@ npm install -S afeiship/next-on-excel-paste --registry=https://registry.npm.taob
   <img src="http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg" />
   <figcaption>Paste Your Picture To Here!</figcaption>
 </figure>
+
 <script>
   document.addEventListener('paste', function(inEvent) {
     const file = nx.onExcelPaste(inEvent);
