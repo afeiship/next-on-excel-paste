@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="/next-js-core2/dist/next-js-core2.js"></script>
+    <script src="/next-file-to-base64/dist/next-file-to-base64.js"></script>
+    <script src="/next-on-excel-paste.js"></script>
+
+    <style>
+      .container {
+        text-align: center;
+        width: 40%;
+        margin: 40px auto;
+      }
+      .container figcaption {
+        height: 40px;
+        line-height: 40px;
+        border: 2px dashed rgb(114, 110, 110);
+        background: #eee;
+      }
+      .container img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <figure class="container">
+      <img src="http://himg.bdimg.com/sys/portrait/item/be10475f686d6c73db00.jpg" />
+      <figcaption>Paste Your Picture To Here!</figcaption>
+    </figure>
+    <script>
+      document.addEventListener('paste', function(inEvent) {
+        const file = nx.onExcelPaste(inEvent);
+        console.log('file:->', file);
+        file &&
+          nx.fileToBase64(file).then((base64) => {
+            document.querySelector('img').src = base64;
+          });
+      });
+    </script>
+  </body>
+</html>

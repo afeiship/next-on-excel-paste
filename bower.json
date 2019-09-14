@@ -1,0 +1,28 @@
+{
+  "name": "next-on-excel-paste",
+  "version": "0.0.1",
+  "description": "nextBoilerplatePackageDescription",
+  "main": "dist/next-on-excel-paste.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-on-excel-paste",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
