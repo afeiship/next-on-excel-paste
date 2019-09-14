@@ -21,4 +21,5 @@ npm install -S afeiship/next-on-excel-paste --registry=https://registry.npm.taob
         document.querySelector('img').src = base64;
       });
   });
+</script>
 ```
